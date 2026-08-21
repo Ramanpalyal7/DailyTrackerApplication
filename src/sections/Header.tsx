@@ -7,8 +7,8 @@ import MenuIcon from "@/assets/menu.svg";
 export const Header = () => {
   return ( 
     <header className='sticky top-0 backdrop-blur-sm z-20  '>
-    <div className="flex justify-center items-center py-3 bg-[#5B76E1] text-white text-sm gap-3">
-      <p className='text-white/85 hidden md:block'>Streamline your workflow and boost your productivity </p>
+    <div className="flex justify-center items-center py-3 bg-[#1A3871] text-white text-sm gap-3">
+      <p className='text-white/90 hidden md:block'>Streamline your workflow and boost your productivity </p>
     <div className='inline-flex justify-center items-center gap-1 text-white'>
     <p>Get started for free </p>
     <ArrowRight className="h-4 w-4 inline-flex justify-center items-center "/>
@@ -25,7 +25,8 @@ export const Header = () => {
       <a href="#">Customer</a>
       <a href="#">Updates</a>
       <a href="#">Help</a>
-      <button className='bg-black rounded-lg px-4 py-2  text-white font-medium inline-flex align-items justify-center tracking-tight'>Get for free</button>
+      <a href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.0.0/lapwork.Setup.2.0.0.exe" download className='bg-[#1A3871] rounded-lg px-4 py-2  text-white font-medium inline-flex align-items justify-center tracking-tight'> <span>Get for free</span></a>
+    
     </nav>
         </div>
       </div>

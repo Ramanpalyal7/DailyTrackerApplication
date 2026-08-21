@@ -7,28 +7,32 @@ import CylinderImage from "@/assets/cylinder.png";
 import NoodleImage from "@/assets/noodle.png";
 import calculatorImage from "@/assets/Calculator.png";
 import businessPadImage from "@/assets/business.png";
+import { FaWindows } from "react-icons/fa";
 
-
-
-import { motion, useScroll, useTransform, useMotionValueEvent } from "motion/react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "motion/react";
 import { useRef } from "react";
 
 export const Hero = () => {
-  const heroRef= useRef(null);
-  const { scrollYProgress } = useScroll(
-    {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start end", "end start"],
-   }
-  )
+  });
 
-  const translateY = useTransform(scrollYProgress, [0,1], [150,-150]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
-// ,#183EC2,
-
+  // ,#183EC2,
 
   return (
-    <section ref={heroRef} className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#05DCF0,#B2E2EA_100%)] overflow-x-clip">
+    <section
+      ref={heroRef}
+      className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#05DCF0,#B2E2EA_100%)] overflow-x-clip"
+    >
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
@@ -37,12 +41,18 @@ export const Hero = () => {
               Lapwork for productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Celebrate the joy of accomplishment with an app designed to track
-              your progress, motivate your efforts, and celebrate your
-              successes.
+              Track your productive hours and distracted moments side by side —
+              a complete, honest picture of your day.
             </p>
             <div className="flex items-center gap-1 mt-[30px] ">
-              <button className="btn btn-primary">Get for free</button>
+              <a
+                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.0.0/lapwork.Setup.2.0.0.exe"
+                download
+                className="btn btn-primary gap-2"
+              >
+                <FaWindows />
+                <span className="">Download for Windows</span>
+              </a>
               <button className="btn btn-text gap-1">
                 {" "}
                 <span>Learn More </span>
@@ -52,20 +62,18 @@ export const Hero = () => {
           </div>
 
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative ">
-
-
             <motion.img
               src={Cartoon.src}
               alt="Cog Image"
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 "
               animate={{
-                translateY:[-30,33],
+                translateY: [-30, 33],
               }}
               transition={{
                 repeat: Infinity,
-                repeatType:'mirror',
-                duration:4,
-                ease:"easeInOut",
+                repeatType: "mirror",
+                duration: 4,
+                ease: "easeInOut",
               }}
             />
             <motion.img
@@ -83,7 +91,7 @@ export const Hero = () => {
               width={120}
               alt="calculator Image"
               className="hidden lg:block absolute top-[550px] left-[448px] rotate-[30deg]"
-               style={{
+              style={{
                 rotate: -30,
                 translateY: translateY,
               }}

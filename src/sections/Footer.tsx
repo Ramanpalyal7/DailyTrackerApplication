@@ -3,8 +3,7 @@ import logo from "@/assets/logosaas.png";
 import SocialX from "@/assets/social-x.svg"; 
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedin from "@/assets/social-linkedin.svg";
-import SocialPin from "@/assets/social-pin.svg";
-import SocialYoutube from "@/assets/social-youtube.svg";
+
 
 
 
@@ -25,11 +24,11 @@ export const Footer = () => {
         <a href="#">Careers</a>
       </nav>
       <div className="flex justify-center gap-6 mt-6 ">
-        <SocialX/>
-        <SocialInsta/>
-        <SocialLinkedin/>
-        <SocialPin/>
-        <SocialYoutube/>
+        
+        <a href="#"target="_blank" rel="noopener noreferrer"><SocialX/></a>
+        <a href="https://www.instagram.com/lapwork_/" target="_blank" rel="noopener noreferrer"><SocialInsta/></a>
+        <a href="https://www.linkedin.com/company/lapwork/" target="_blank" rel="noopener noreferrer"><SocialLinkedin/></a>     
+   
 
       </div>
 <p className="mt-6">&copy; 2026 LapWork, Inc. All rights reserved.</p>

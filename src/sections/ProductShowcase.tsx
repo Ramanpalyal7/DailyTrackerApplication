@@ -4,6 +4,7 @@ import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
 import checklistImage from "@/assets/checklistquality.png";
 import clockImage from "@/assets/clockquality.png";
+import lapworkImage from "@/assets/lapworkApplication1.png";
 
 import Image from "next/image";
 import { motion, useScroll , useTransform } from "motion/react";
@@ -33,7 +34,7 @@ export const ProductShowcase = () => {
           </p>
         </div>
         <div className="relative">
-          <Image src={productImage} alt="product Image" className="mt-10" />
+          <Image src={lapworkImage} alt="product Image" className="mt-10 rounded-2xl" />
           <motion.img
             src={clockImage.src}
             alt="pyramid Image"

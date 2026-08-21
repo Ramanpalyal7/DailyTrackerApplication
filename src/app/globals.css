@@ -8,7 +8,7 @@
     }
 
     .btn-primary{
-        @apply bg-[#5B76E1] text-white;
+        @apply bg-[#1A3871] text-white;
     }
 
     .btn-text{

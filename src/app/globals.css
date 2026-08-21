@@ -8,7 +8,7 @@
     }
 
     .btn-primary{
-        @apply bg-black text-white;
+        @apply bg-[#5B76E1] text-white;
     }
 
     .btn-text{
@@ -24,7 +24,7 @@
     }
 
     .section-title{
-        @apply text-center text-3xl md:text-[54px] md:leading-[65px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
+        @apply text-center text-3xl md:text-[54px] md:leading-[65px] font-bold tracking-tighter bg-gradient-to-b from-[#A0FBFF] to-[#2256f3] text-transparent bg-clip-text;
     }
 
     .section-para{

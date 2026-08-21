@@ -82,20 +82,20 @@ export const Pricing = () => {
               <div
                 className={twMerge(
                   "card",
-                  inverse === true && "border-black bg-black text-white",
+                  inverse === true && "border-black bg-black text-white ",
                 )}
               >
                 <div className="flex justify-between">
                   <h3
                     className={twMerge(
-                      "text-lg font-bold text-black/50",
+                      "text-lg font-bold text-black/50 ",
                       inverse === true && "text-white/60",
                     )}
                   >
                     {title}
                   </h3>
                   {popular === true && (
-                    <div className="inline-flex text-sm px-4 py-1.5 rounded-2xl border border-white/20">
+                    <div className="inline-flex text-sm px-4 py-1.5 rounded-2xl border  border-white/20">
                       <motion.span 
                       animate={{
                         backgroundPositionX: "100%",
@@ -117,7 +117,7 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     ${monthlyPrice}
                   </span>
-                  <span className="tracking-tight font-bold text-black/50">
+                  <span className="tracking-tight font-bold text-gray-300">
                     /month
                   </span>
                 </div>

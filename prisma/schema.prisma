@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Stores the latest cached GitHub releases so we don't hit the GitHub API on every page load
+model AppRelease {
+  id          String   @id       @default(cuid())
+  version     String   
+  platform    String   // "windows" or "macos"
+  fileName    String
+  downloadUrl String
+  size        Int
+  publishedAt DateTime
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  @@unique([version, platform])
+}
+
+// Tracks every time someone clicks the download button
+model DownloadEvent {
+  id        String   @id @default(cuid())
+  platform  String   // "windows" or "macos"
+  version   String?  
+  visitorId String?  // Anonymous browser ID
+  createdAt DateTime     @default(now())
+
+  @@index([createdAt])
+}
+
+// Tracks every time someone visits the website
+model PageView {
+  id        String   @id  @default(cuid())
+  path      String        @default("/")
+  visitorId String?  // Anonymous browser ID
+  createdAt DateTime      @default(now())
+
+  @@index([createdAt])
+}
+
+// Stores pre-calculated daily totals for fast analytics dashboard loading
+model DailyStat {
+  id             String   @id @default(cuid())
+  date           String   @unique // Format: YYYY-MM-DD
+  totalVisits    Int      @default(0)
+  totalDownloads Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}

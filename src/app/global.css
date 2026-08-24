@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components{
     .btn{
         @apply bg-black rounded-lg px-4 py-2  text-white font-medium inline-flex items-center justify-center tracking-tight;
@@ -39,5 +43,12 @@
         @apply p-10 border border-[#dbdbdb] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
     }
 
+    .text-colored{
+        @apply text-3xl md:text-5xl tracking-tighter font-bold bg-gradient-to-b from-[#016377] to-[#2256f3] text-transparent bg-clip-text;
+    }
+    
+    .footer-text{
+        @apply  mx-auto mt-2 text-center font-black leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#9af7ff] via-[#01c6ed] to-[#2256f3] opacity-90 text-xl sm:text-[2rem] md:text-[4rem] ;
+    }
 
 }

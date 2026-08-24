@@ -4,9 +4,10 @@ import { LogoTicker } from "@/sections/LogoTicker";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
-import { CallToAction } from "@/sections/CallToAction";
+import { AboutUs } from "@/sections/AboutUs";
 import { Footer } from "@/sections/Footer";
-
+import { Stats } from "@/sections/StatsDisplay";
+import { FAQ } from "@/sections/FAQ";
 
 
 export default function Home() {
@@ -14,12 +15,26 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <Stats/>
       <LogoTicker/>
       <ProductShowcase/>
-      <Pricing />
+      <section id="features" className="scroll-mt-28 ">
+      <FAQ/>
+
+      </section>
+      {/* <Pricing /> */}
+      <section id="customers" className="scroll-mt-28">
       <Testimonials />
-      <CallToAction/>
+
+      </section>
+      <section  id="about" className="scroll-mt-28">
+      <AboutUs/>
+      </section>
+    <section id="contact" className="scroll-mt-28">
       <Footer/>
+
+    </section>
+
     </>
   );
 }

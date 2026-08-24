@@ -8,6 +8,10 @@ import NoodleImage from "@/assets/noodle.png";
 import calculatorImage from "@/assets/Calculator.png";
 import businessPadImage from "@/assets/business.png";
 import { FaWindows } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { trackDownload } from "@/lib/api";
+
+
 
 import {
   motion,
@@ -28,6 +32,14 @@ export const Hero = () => {
 
   // ,#183EC2,
 
+  // Download count handler
+
+      const handleDownloadClick = async () => {
+        await trackDownload();
+      }
+
+
+
   return (
     <section
       ref={heroRef}
@@ -38,7 +50,7 @@ export const Hero = () => {
           <div className="md:w-[478px]">
             <div className="tag">Version 2.0 is here</div>
             <h1 className="text-5xl md:text-7xl tracking-tighter font-bold bg-gradient-to-b from-[#016377] to-[#2256f3] text-transparent bg-clip-text">
-              Lapwork for productivity
+              lapwork for productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
               Track your productive hours and distracted moments side by side —
@@ -46,18 +58,31 @@ export const Hero = () => {
             </p>
             <div className="flex items-center gap-1 mt-[30px] ">
               <a
-                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.0.0/lapwork.Setup.2.0.0.exe"
+                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.2.0/lapwork.Setup.2.2.0.exe"
                 download
                 className="btn btn-primary gap-2"
+                onClick={handleDownloadClick}
               >
                 <FaWindows />
                 <span className="">Download for Windows</span>
               </a>
-              <button className="btn btn-text gap-1">
+              <a
+                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.2.0/lapwork.Setup.2.2.0.exe"
+                download
+                className="btn btn-primary gap-2"
+                onClick={handleDownloadClick}
+              >
+                <FaApple />
+                <span className="">macOS Coming Soon...</span>
+              </a>
+
+
+
+              {/* <button className="btn btn-text gap-1">
                 {" "}
                 <span>Learn More </span>
                 <ArrowRight className="h-5 w-5" />
-              </button>
+              </button> */}
             </div>
           </div>
 

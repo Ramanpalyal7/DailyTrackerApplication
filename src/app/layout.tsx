@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import {twMerge}  from "tailwind-merge";
-import "./globals.css";
+import "./global.css";
 
 // import clsx from "clsx";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Light Saas Landing Page",
-  description: "Template created by Frontend Tribe",
+  title: "Lapwork ",
+  description: "real Productivity Buddy",
 };
 
 export default function RootLayout({

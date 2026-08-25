@@ -9,8 +9,6 @@ import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { trackDownload } from "@/lib/api";
 
-
-
 import {
   motion,
   useScroll,
@@ -31,12 +29,10 @@ export const Hero = () => {
   // ,#183EC2,
 
   // Download count handler
-
-      const handleDownloadClick = async () => {
-        await trackDownload();
-      }
-
-
+  const handleDownloadClick = (platform: string) => {
+    const visitorId = localStorage.getItem("lapwork_visitor_id") || "anonymous";
+    window.location.href = `/api/download?platform=${platform}&visitorId=${visitorId}`;
+  };
 
   return (
     <section
@@ -56,25 +52,23 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col md:flex-row  items-center gap-5 md:gap-2 mt-[30px] ">
               <a
-                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.3.7/lapwork.Setup.2.3.7.exe"
-                download
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleDownloadClick("windows");
+                }}
                 className="btn btn-primary gap-2"
-                onClick={handleDownloadClick}
               >
                 <FaWindows />
-                <span className="">Download for Windows</span>
+                <span>Download for Windows</span>
               </a>
               <a
-                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.3.7/lapwork.Setup.2.3.7.exe"
-                download
                 className="btn btn-primary gap-2"
                 // onClick={handleDownloadClick}
               >
                 <FaApple />
                 <span className="">macOS Coming Soon...</span>
               </a>
-
-
 
               {/* <button className="btn btn-text gap-1">
                 {" "}

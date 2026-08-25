@@ -74,7 +74,7 @@ export const Footer = () => {
             </motion.a>
 
             <motion.a
-              href="https://www.linkedin.com/company/lapwork/"
+              href="https://x.com/lapwork_"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}

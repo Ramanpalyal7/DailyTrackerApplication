@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
       createApiResponse(true, stats),
       {
         headers: {
-          "Cache-Control": "public, max-age=30, s-maxage=30, stale-while-revalidate=60",
+          "Cache-Control": "public, max-age=2, s-maxage=2, stale-while-revalidate=60"
         },
       }
     );

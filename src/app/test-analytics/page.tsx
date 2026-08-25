@@ -192,7 +192,7 @@ export default function TestAnalyticsPage() {
                   marginBottom: "10px",
                 }}
               >
-                Today's Stats
+                {"Today's Stats"}
               </h3>
               <div style={infoRowStyle}>
                 <span>Date:</span>

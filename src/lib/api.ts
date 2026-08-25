@@ -2,7 +2,7 @@ export const trackDownload = async () => {
 
     try{
 
-        const response = await fetch("URL",{
+        const response = await fetch("/api/track-download",{
             method:"POST",
         });
         
@@ -22,7 +22,7 @@ export const getStats = async () => {
 
     try{
 
-        const response= await fetch("URL",{
+        const response= await fetch("/api/analytics/stats",{
             method:"GET",
         });
         

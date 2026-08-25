@@ -7,6 +7,8 @@ import SocialLinkedin from "@/assets/social-linkedin.svg";
 import { motion } from "motion/react";
 
 export const Footer = () => {
+
+
   return (
     <footer className="bg-white text-black/85 text-sm py-10 text-center w-full overflow-hidden ">
       <div className="container flex flex-col relative right-16 md:mb-12 md:right-0 w-[62%]  md:m-auto  md:w-[90%] md:flex-row md:items-center ">
@@ -25,36 +27,36 @@ export const Footer = () => {
         </div>
         <nav className="flex flex-col items-start gap-3 mt-6 md:flex-row md:justify-center md:items-center  md:mt-0 md:gap-3 lg:gap-8 md:w-[32%] md:relative md:left-40 lg:m-auto  lg:left-14 lg:text-lg">
           <motion.a
-            href="#"
-            className="text-black/60"
+            href="#about"
+            className="navLinkClass"
             whileHover={{ y: -3, color: "#1A3871" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             About
           </motion.a>
           <motion.a
-            href="#"
-            className="text-black/60"
+            href="#features"
+            className="navLinkClass"
             whileHover={{ y: -3, color: "#1A3871" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Features
           </motion.a>
           <motion.a
-            href="#"
-            className="text-black/60"
+            href="#customers"
+            className="navLinkClass"
             whileHover={{ y: -3, color: "#1A3871" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Customer
           </motion.a>
           <motion.a
-            href="#"
-            className="text-black/60"
+            href="#contact"
+            className="navLinkClass"
             whileHover={{ y: -3, color: "#1A3871" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Updates
+            Contact
           </motion.a>
 
           {/* <a href="#">Careers</a> */}

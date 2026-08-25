@@ -50,5 +50,8 @@ html {
     .footer-text{
         @apply  mx-auto mt-2 text-center font-black leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#9af7ff] via-[#01c6ed] to-[#2256f3] opacity-90 text-xl sm:text-[2rem] md:text-[4rem] ;
     }
+    .navLinkClass{
+        @apply text-black/60;
+    }
 
 }

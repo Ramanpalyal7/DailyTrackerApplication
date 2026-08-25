@@ -1,11 +1,22 @@
 "use client";
-import ArrowRight from "@/assets/arrow-right.svg";
+
 import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
 import { motion } from "motion/react";
+import { useState } from "react";
+
 
 export const Header = () => {
+
+  const[isMenuOpen,setIsMenuOpen]= useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+ 
+
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20  ">
       <div className="flex justify-center items-center py-3 bg-[#1A3871] text-white text-sm gap-3">
@@ -24,12 +35,20 @@ export const Header = () => {
               width:"auto", 
               height:"auto"
             }}></Image>
-            <MenuIcon className="h-5 w-5 md:hidden" />
+
+            {/* ------- Menu Icon  -----  */}
+
+            <MenuIcon 
+            onClick= {toggleMenu}
+            className="h-5 w-5 md:hidden" />
+
+           {/*------ Desktop nav------- */}
+
             <nav className=" hidden md:flex gap-6 text-black/60 items-center">
               {/* <a href='#' className='transition-transform hover:-translate-y-1'>About</a> */}
               <motion.a
                 href="#about"
-                className="text-black/60"
+                className="navLinkClass"
                 whileHover={{ y: -3, color: "#1A3871" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -37,7 +56,7 @@ export const Header = () => {
               </motion.a>
               <motion.a
                 href="#features"
-                className="text-black/60"
+                className="navLinkClass"
                 whileHover={{ y: -3, color: "#1A3871" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -45,7 +64,7 @@ export const Header = () => {
               </motion.a>
               <motion.a
                 href="#customers"
-                className="text-black/60"
+                className="navLinkClass"
                 whileHover={{ y: -3, color: "#1A3871" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -53,7 +72,7 @@ export const Header = () => {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="text-black/60"
+                className="navLinkClass"
                 whileHover={{ y: -3, color: "#1A3871" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -69,7 +88,55 @@ export const Header = () => {
                 <span>Download Now</span>
               </a>
             </nav>
-          </div>
+          </div>  
+            {/* ---  Navbar Moblie view Logic -------- */}
+            {isMenuOpen && (
+               <nav className="flex flex-col md:hidden gap-4 mt-4 text-black/60 items-start">
+              <motion.a
+                href="#about"
+                className="navLinkClass"
+                onClick={toggleMenu}
+                whileHover={{ y: -3, color: "#1A3871" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                About
+              </motion.a>
+              <motion.a
+                href="#features"
+                className="navLinkClass"
+                onClick={toggleMenu}
+                whileHover={{ y: -3, color: "#1A3871" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Features
+              </motion.a>
+              <motion.a
+                href="#customers"
+                className="navLinkClass"
+                onClick={toggleMenu}
+                whileHover={{ y: -3, color: "#1A3871" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Customer
+              </motion.a>
+              <motion.a
+                href="#contact"
+                className="navLinkClass"
+                onClick={toggleMenu}
+                whileHover={{ y: -3, color: "#1A3871" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Contact
+              </motion.a>
+             <a  href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.0.0/lapwork.Setup.2.0.0.exe"
+                download
+                className="bg-[#1A3871] rounded-lg px-4 py-2 text-white font-medium inline-flex justify-center tracking-tight"
+              >
+                 {" "}
+                <span>Download Now</span>
+              </a>
+            </nav>
+            )}
         </div>
       </div>
     </header>

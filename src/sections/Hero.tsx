@@ -1,10 +1,8 @@
 "use client";
-import ArrowRight from "@/assets/arrow-right.svg";
-import CogImage from "@/assets/cog.png";
+
 import Cartoon from "@/assets/Cartoon.png";
 import Image from "next/image";
-import CylinderImage from "@/assets/cylinder.png";
-import NoodleImage from "@/assets/noodle.png";
+
 import calculatorImage from "@/assets/Calculator.png";
 import businessPadImage from "@/assets/business.png";
 import { FaWindows } from "react-icons/fa";
@@ -56,9 +54,9 @@ export const Hero = () => {
               Track your productive hours and distracted moments side by side —
               a complete, honest picture of your day.
             </p>
-            <div className="flex items-center gap-1 mt-[30px] ">
+            <div className="flex flex-col md:flex-row  items-center gap-5 md:gap-2 mt-[30px] ">
               <a
-                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.2.0/lapwork.Setup.2.2.0.exe"
+                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.3.7/lapwork.Setup.2.3.7.exe"
                 download
                 className="btn btn-primary gap-2"
                 onClick={handleDownloadClick}
@@ -67,10 +65,10 @@ export const Hero = () => {
                 <span className="">Download for Windows</span>
               </a>
               <a
-                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.2.0/lapwork.Setup.2.2.0.exe"
+                href="https://github.com/binaryrishabh/lapwork_Windows/releases/download/v2.3.7/lapwork.Setup.2.3.7.exe"
                 download
                 className="btn btn-primary gap-2"
-                onClick={handleDownloadClick}
+                // onClick={handleDownloadClick}
               >
                 <FaApple />
                 <span className="">macOS Coming Soon...</span>

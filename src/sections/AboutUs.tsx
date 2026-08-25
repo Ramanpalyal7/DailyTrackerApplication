@@ -1,10 +1,5 @@
 "use client";
-import ArrowRight from "@/assets/arrow-right.svg";
-import starImage from "@/assets/star.png";
-import springImage from "@/assets/spring.png";
-import cursorImage from "@/assets/cursorIcon.png";
-import aboutIconImage from "@/assets/aboutIcon.png";
-import scrollImage from "@/assets/scroll.png";
+
 import aboutImage from "@/assets/aboutpro.png";
 
 import Image from "next/image";

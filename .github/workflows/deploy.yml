@@ -30,7 +30,6 @@ jobs:
         run: |
           vercel deploy --prod \
             --token=${{ secrets.VERCEL_TOKEN }} \
-            --scope=team_BTSBXkt4CHmAvGvXyFoUXCb6 \
             --yes
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

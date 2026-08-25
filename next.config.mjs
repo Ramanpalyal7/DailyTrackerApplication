@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverExternalPackages: ["@upstash/redis", "pg", "@prisma/client", "@prisma/adapter-pg"],
+  experimental: {
+    serverComponentsExternalPackages: ["@upstash/redis", "pg", "@prisma/client", "@prisma/adapter-pg"],
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg")
